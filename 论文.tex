@@ -1,0 +1,208 @@
+
+\documentclass[UTF8, zihao=-4, linespread=1.25]{ctexart}
+%...................................................... 
+%                    文献引用格式
+%...................................................... 
+\usepackage{gbt7714}
+\usepackage{natbib}
+    \setcitestyle{round}
+%......................................................   
+\usepackage{setspace}
+%...................................................... 
+%                    目录格式
+%...................................................... 
+\usepackage{titlesec}
+\usepackage{titletoc}    
+    \titlecontents{section}%.................................目录一级标题
+    [21pt]%..........................章节标题内容与左边的距离42pt为3cm
+    {\songti \zihao{-3}}%
+    {\contentslabel{1.5em}}%章节序号与章节标题的距离(序号头到标题头距离)
+    {\hspace*{-1.5em}}%.......................无序号章节标题的移动距离
+    {\titlerule*[0.5pc]{.}\contentspage}%..........章节与页码间的连线
+    \titlecontents{subsection}
+    [49pt]
+    {\songti \zihao{4}}%
+    {\contentslabel{27pt}}%
+    {}%
+    {\titlerule*[0.5pc]{.}\contentspage}%
+    \titlecontents{subsubsection}
+    [72pt]
+    {\songti \zihao{4}}%
+    {\contentslabel{35pt}}%
+    {}%
+    {\titlerule*[0.5pc]{.}\contentspage}%
+    \renewcommand{\contentsname}{{\zihao{3}  {目\quad 录} }}    
+%...................................................... 
+%                    纸张边距
+%...................................................... 
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{geometry}
+    \geometry{a4paper,left=3cm,right=1.5cm,top=3cm,bottom=2.5cm}
+%...................................................... 
+%                    页眉页脚格式
+%...................................................... 
+\usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \headheight=3cm
+    \lhead{\quad \newline  
+        \includegraphics[height=0.56cm]{logo2.png} \hspace{-5pt}
+        毕业设计（论文）专用纸 \\[-10pt]
+    }
+    \chead{}
+    \rhead{}
+    
+    \lfoot{}
+    \cfoot{\setmainfont{Times New Roman}\thepage}
+    \rfoot{}
+    \renewcommand{\headrulewidth}{0.4pt}
+    \renewcommand{\footrulewidth}{0pt}
+
+%...................................................... 
+%                    章节样式
+%...................................................... 
+\ctexset{
+    section = {
+        number = \chinese{section},
+        format+ = \zihao{-3}\heiti,
+        aftername = \ ,
+        afterskip = {5cm},
+        beforeskip = {10pt},
+    },
+    subsection = {
+        format+ = \zihao{4}\setmainfont{SimHei}\heiti,
+        numberformat+ = \setmainfont{SimHei},
+        fixskip = true,
+        afterskip = {10pt},
+        beforeskip = {10pt},
+    },
+    subsubsection = {
+        format+ = \zihao{4}\setmainfont{SimHei}\heiti,
+    }
+}
+
+%...................................................... 
+%                    文章基本信息
+%...................................................... 
+\title{a}
+\author{gx}
+\date{\today}
+%...................................................... 
+%                    下划线设定（咋实现的我也不清楚）
+%...................................................... 
+\makeatletter
+\newcommand\dlmu[2][4cm]{\hskip1pt\underline{\hb@xt@ #1{\hss#2\hss}}\hskip3pt}
+\makeatother
+% ....................................................................
+%
+%                           以下为正文部分
+% 
+% ........................................................................
+\begin{document}
+\newgeometry{right=1.5cm,bottom=2.5cm,headsep=0.1cm}
+\setmainfont{SimSun} %英文字体设为宋体
+% \fancyfoot[c]{\setmainfont{Times New Roman}\thepage} 
+\bibliographystyle{gbt7714-numerical}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=1]{logo1.png}
+\end{figure}
+{\zihao{-0}\heiti\ 毕\hspace*{-1pt}  业\hspace*{-1pt} 设\hspace*{-1pt} 计\hspace*{-10pt}（论\hspace*{-1pt} 文） }
+\\[3.5cm]
+\begin{center}
+    {\zihao{2} \textbf{题\hspace*{0.5em}目\hspace*{0.5em}}\dlmu[12cm]{我是12cm长}}
+    \\[7.5cm]
+    {\zihao{3}
+        \textbf{姓\hspace*{2em}名}\dlmu[6cm]{我是6cm长} 
+
+        \textbf{学\hspace*{2em}号}\dlmu[6cm]{我是6cm长} 
+
+        \textbf{所在学院}\dlmu[6cm]{我是6cm长} 
+
+        \textbf{专业班级}\dlmu[6cm]{我是6cm长} 
+
+        \textbf{指导老师}\dlmu[6cm]{我是6cm长} 
+
+        \textbf{日\hspace*{2em}期}\dlmu[6cm]{我是6cm长} 
+
+    }
+\end{center}
+
+\thispagestyle{empty}
+\pagestyle{fancy}
+%..................................摘要..................................
+\newpage
+
+\section*{摘\hspace{15pt} 要}
+\addcontentsline{toc}{section}{摘~ 要}
+百年大计，教育为本；教育大计，教师为本。
+
+\setcounter{page}{1}
+\pagenumbering{Roman}
+
+\newpage
+\section*{\setmainfont{Times New Roman}Abstract}
+\addcontentsline{toc}{section}{Abstract}
+北京是capital of China.
+
+\paragraph{Tian'anmen Square}
+
+\newpage
+\begin{spacing}{1.32} 
+\hspace*{1cm}\vspace{-0.8cm}
+
+{\zihao{-2} \centerline{原创性声明}}
+
+本人郑重声明：所呈交的学位论文是本人在导师的指导下独立进行研究 所取得的研究成果。除了文中特别加以标注引用的内容外，本论文不包含任 何其他个人或集体已经发表或撰写的成果作品。本人完全意识到本声明的法 律后果由本人承担。
+\\ \\
+作者签名：\hspace*{7cm}              日期：\hspace*{3em} 年 \quad 月 \quad 日
+\\[5.5cm]
+{\zihao{-2}\centerline{学位论文版权使用授权书}}
+
+本学位论文作者完全了解学院有关保管、使用学位论文的规定，同意学 院保留并向有关学位论文管理部门或机构送交论文的复印件和电子版，允许 论文被查阅和借阅。本人授权省级优秀学士学位论文评选机构将本学位论文 的全部或部分内容编入有关数据库进行检索，可以采用影印、缩印或扫描等 复制手段保存和汇编本学位论文。
+\\ \\
+本学位论文属于
+
+1、保密   □，在      年解密后适用本授权书。
+
+
+2、不保密 □
+
+\hspace*{4em}（请在以上相应方框内打“√”）\\
+
+作者签名：\hspace*{7cm}              日期：\hspace*{3em} 年 \quad 月 \quad 日
+
+导师签名：\hspace*{7cm}              日期：\hspace*{3em} 年 \quad 月 \quad 日
+\end{spacing}  
+\setcounter{page}{3}
+
+%............................目录.......................
+\addcontentsline{toc}{section}{目\hspace{7pt} 录}
+\newpage
+{\setmainfont{Times New Roman}\tableofcontents 
+\setcounter{page}{3}
+
+%...................................................... 
+%                    章节开始
+%...................................................... 
+\newpage
+\section{绪论}
+\subsection{课题研究背景}
+
+百年大计，教育为本；教育大计，教师为本。\cite{test1}
+
+
+
+\pagestyle{fancy}
+\setcounter{page}{1}
+\pagenumbering{arabic}
+% .............
+\subsection{课题的研究目的及意义}
+\subsubsection{课题的社会意义}
+
+
+%................
+\newpage
+\addcontentsline{toc}{section}{参考文献}
+\bibliography{test}%参考文献文件
+\end{document}
